@@ -1,55 +1,33 @@
-Yii 2 Advanced Project Template
+WII-CMS
 ===============================
+基于YII2框架开发。这个版本主要是外壳。此版本中主要区别是根据白狼栈教程在yii2框架下载后：
+增加了  rbac管理模式和bootstrap下的后台模板。
+增加了  gii的定制模板 定制模块名见backend/commposer/components/gii-custom
 
-Yii 2 Advanced Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
-developing complex Web applications with multiple tiers.
-
-The template includes three tiers: front end, back end, and console, each of which
-is a separate Yii application.
-
-The template is designed to work in a team development environment. It supports
-deploying the application in different environments.
-
-Documentation is at [docs/guide/README.md](docs/guide/README.md).
-
-[![Latest Stable Version](https://poser.pugx.org/yiisoft/yii2-app-advanced/v/stable.png)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Total Downloads](https://poser.pugx.org/yiisoft/yii2-app-advanced/downloads.png)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Build Status](https://travis-ci.org/yiisoft/yii2-app-advanced.svg?branch=master)](https://travis-ci.org/yiisoft/yii2-app-advanced)
-
-DIRECTORY STRUCTURE
+安装方法
 -------------------
+```
+git  clone https://github.com/anjiacm/wii-shell.git
 
 ```
-common
-    config/              contains shared configurations
-    mail/                contains view files for e-mails
-    models/              contains model classes used in both backend and frontend
-    tests/               contains tests for common classes    
-console
-    config/              contains console configurations
-    controllers/         contains console controllers (commands)
-    migrations/          contains database migrations
-    models/              contains console-specific model classes
-    runtime/             contains files generated during runtime
-backend
-    assets/              contains application assets such as JavaScript and CSS
-    config/              contains backend configurations
-    controllers/         contains Web controller classes
-    models/              contains backend-specific model classes
-    runtime/             contains files generated during runtime
-    tests/               contains tests for backend application    
-    views/               contains view files for the Web application
-    web/                 contains the entry script and Web resources
-frontend
-    assets/              contains application assets such as JavaScript and CSS
-    config/              contains frontend configurations
-    controllers/         contains Web controller classes
-    models/              contains frontend-specific model classes
-    runtime/             contains files generated during runtime
-    tests/               contains tests for frontend application
-    views/               contains view files for the Web application
-    web/                 contains the entry script and Web resources
-    widgets/             contains frontend widgets
-vendor/                  contains dependent 3rd-party packages
-environments/            contains environment-based overrides
+然后通过composer(没有安装过的可以参考这个：http://www.yiichina.com/tutorial/324)
+如果已经装过composer的话就更新下
 ```
+composer  self-update
+php composer.phar global require "fxp/composer-asset-plugin:1.0.0"(准备所有插件！！非常重要，少了这步一切都会失败)
+```
+然后进入根目录 
+```
+composer install
+
+```
+
+注意点：我这个版本不知道为什么不能下载linslin/yii2-curl
+这个主要是api curl 用   如果有需要可以直接去git上下载
+或者composer
+```
+composer  require --prefer-dist linslin/yii2-curl "*"
+```
+
+关于yii2有啥问题的可以参考网站：http://www.manks.top/  白狼栈
+如果有啥意见意见可以联系QQ 546167337  安大人
