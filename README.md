@@ -1,6 +1,6 @@
 WII-CMS
 ===============================
-基于YII2框架开发。这个版本主要是外壳。此版本中主要区别是根据白狼栈教程在yii2框架下载后：
+基于YII2框架开发。这个版本主要是外壳。此版本中主要区别是根据白狼栈教程在yii2框架下载后： <br />
 增加了  rbac管理模式和bootstrap下的后台模板。
 增加了  gii的定制模板 定制模块名见backend/commposer/components/gii-custom
 
@@ -21,7 +21,8 @@ php composer.phar global require "fxp/composer-asset-plugin:1.0.0"(准备所有�
 composer install
 
 ```
-
+然后记得导入数据库  数据库文件见SQL文件夹  
+ <br />
 注意点：我这个版本不知道为什么不能下载linslin/yii2-curl
 这个主要是api curl 用   如果有需要可以直接去git上下载
 或者composer
