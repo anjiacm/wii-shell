@@ -1,6 +1,6 @@
 <?php
 namespace backend\models;
-
+use Yii;
 use yii\base\Model;
 use backend\models\UserBackend;
 
@@ -15,7 +15,7 @@ class SignupForm extends Model
     public $password;
     public $created_at;
     public $updated_at;
-
+    public $passwordnew;
     /**
      * @inheritdoc
      * 对数据的校验规则
@@ -39,8 +39,8 @@ class SignupForm extends Model
             ['email', 'email'],
             ['email', 'string', 'max' => 255],
             ['email', 'unique', 'targetClass' => '\backend\models\UserBackend', 'message' => 'email已经被设置了.'],
-            ['password', 'required', 'message' => '密码不可以为空'],
-            ['password', 'string', 'min' => 6, 'tooShort' => '密码至少填写6位'],
+            [['password','passwordnew'], 'required', 'message' => '密码不可以为空'],
+            [['password','passwordnew'], 'string', 'min' => 6, 'tooShort' => '密码至少填写6位'],
             // default 默认在没有数据的时候才会进行赋值
             [['created_at', 'updated_at'], 'default', 'value' => time()],
         ];
@@ -72,5 +72,26 @@ class SignupForm extends Model
         // 这里这个false如果不加，save底层会调用UserBackend的rules方法再对数据进行一次校验，这是没有必要的。
         // 因为我们上面已经调用Signup的rules校验过了，这里就没必要再用UserBackend的rules校验了
         return $user->save(false);
+    }
+
+    public function changePassword(){
+        $id = YII::$app->user->id;
+        $admin=  UserBackend::findIdentity($id);
+        $password = $admin->password;
+
+        if(Yii::$app->getSecurity()->validatePassword($this->password, $password)){
+            $newPass = Yii::$app->getSecurity()->generatePasswordHash($this->passwordnew);
+            $admin->password = $newPass;
+            if($admin->save()){
+                Yii::$app->session->setFlash('success','保存成功');
+                return true;
+            }else{
+                Yii::$app->session->setFlash('error','保存失败');
+                return false;
+            }
+        }else{
+            Yii::$app->session->setFlash('error','旧密码错误');
+            return false;
+        }
     }
 }
