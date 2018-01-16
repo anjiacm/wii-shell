@@ -21,6 +21,14 @@ php composer.phar global require "fxp/composer-asset-plugin:1.0.0"(准备所有�
 composer install
 
 ```
+好了之后，进行初始化 进入目录  
+```
+init
+
+0 
+
+y
+```
 然后记得导入数据库  数据库文件见SQL文件夹  
  <br />
 注意点：我这个版本不知道为什么不能下载linslin/yii2-curl
