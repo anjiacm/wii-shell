@@ -18,7 +18,7 @@ class Test extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'w_test';
+        return '{{%test}}';
     }
 
     /**

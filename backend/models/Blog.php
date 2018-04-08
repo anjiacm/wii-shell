@@ -22,7 +22,7 @@ class Blog extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'w_blog';
+        return '{{%blog}}';
     }
 
     /**

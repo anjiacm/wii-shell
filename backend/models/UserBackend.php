@@ -31,7 +31,7 @@ class UserBackend extends \yii\db\ActiveRecord implements IdentityInterface
     //const ASSINGMAN ='角色-超级管理员';
     public static function tableName()
     {
-        return 'w_user_backend';
+        return '{{%user_backend}}';
     }
 
     /**

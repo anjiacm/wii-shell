@@ -22,7 +22,7 @@ class IpLog extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'w_ip_log';
+        return '{{%ip_log}}';
     }
 
     /**
