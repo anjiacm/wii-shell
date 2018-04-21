@@ -1,5 +1,8 @@
 <?php
-
+/*
+ * main-local生成后，可选择将该文件名改成main-local
+ * 该文件主要配置为设置自定义的gii模板
+ * */
 $config = [
     'components' => [
         'request' => [

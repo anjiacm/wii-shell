@@ -21,7 +21,8 @@
         "dmstr/yii2-adminlte-asset": "2.*",
         "mdmsoft/yii2-admin": "^3.2",
         "bailangzhan/yii2-webuploader": "dev-master",
-        "linslin/yii2-curl": "*"
+        "linslin/yii2-curl": "*",
+        "yiisoft/yii2-redis": "^2.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

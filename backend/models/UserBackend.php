@@ -6,7 +6,7 @@ use Yii;
 use yii\web\IdentityInterface;
 use rbac\models\Assignment as adminAssignment;
 /**
- * This is the model class for table "w_user_backend".
+ * This is the model class for table "{{%user_backend}}".
  *
  * @property integer $id
  * @property string $username

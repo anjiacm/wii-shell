@@ -5,7 +5,7 @@ namespace backend\models;
 use Yii;
 
 /**
- * This is the model class for table "w_test".
+ * This is the model class for table "{{%test}}".
  *
  * @property integer $id
  * @property string $text

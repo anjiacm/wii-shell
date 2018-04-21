@@ -51,18 +51,7 @@ return [
             ],
             'appendTimestamp' => true,
         ],
-        // 配置数据库
-        'db' => [
-            'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=127.0.0.1;dbname=wyii_cms',
-            'username' => 'root',
-            'password' => '',
-            'charset' => 'utf8',
-            'tablePrefix' => 'w_',
-            'enableSchemaCache' => true,
-            'schemaCacheDuration' => 24*3600,
-            'schemaCache' => 'cache',
-        ],
+
         'user' => [
             'identityClass' => 'backend\models\UserBackend',
             'enableAutoLogin' => true,

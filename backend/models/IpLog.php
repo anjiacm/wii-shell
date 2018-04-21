@@ -5,7 +5,7 @@ namespace backend\models;
 use Yii;
 
 /**
- * This is the model class for table "w_ip_log".
+ * This is the model class for table "{{%ip_log}}".
  *
  * @property integer $id
  * @property string $ip_all
